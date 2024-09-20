@@ -1,0 +1,130 @@
+h1 {
+    text-align: center;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    font-size: 500%;
+}
+
+p {
+    font-family: "Rye", serif;
+    font-size: 256%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.imagen-de-fondo {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Fondo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(0.8px);
+}
+
+#vista-principal {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    background-color: #518f53; 
+    font-family: "Rye", serif;
+    border: none;
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center;  
+    font-size: 16px;
+    margin: 4px 2px;                       
+    cursor: pointer; 
+    border-radius: 12px;  
+    transition-duration: 0.01s; 
+}
+
+button:hover {
+    background-color: #6da76f; 
+    color: black; 
+    border: 2px solid #4CAF50; 
+}
+
+#vista-principal button {
+    margin-top: 20px;
+}
+
+#vista-juego {
+    text-align: center;
+}
+
+#palabra-a-adivinar {
+    font-family: "Rye", serif;
+    font-size: 24px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+#teclado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#teclado button {
+    margin: 5px;
+    padding: 10px;
+    font-family: "Rye", serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #518f53;
+    color: white;
+}
+
+#teclado button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+#boton-reiniciar, #boton-volver-inicio {
+    margin: 10px;
+    padding: 10px;
+    font-family: "Rye", serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #518f53;
+    color: white;
+}
+
+/* Estilos para el grupo de entrada */
+.grupo-de-entrada {
+    position: relative;
+}
+
+.entrada {
+    font-family: "Rye", serif;
+    font-size: 256%;
+    border: solid 1px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.entrada:focus, .entrada:valid {
+    outline: none;
+    border: 1px solid #519053;
+}

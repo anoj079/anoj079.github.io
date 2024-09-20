@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <div class="imagen-de-fondo"></div>
+
+    <div id="vista-principal">
+        <h1>AHORCADO</h1>
+        <p>¡A jugar!</p>
+        <div class="grupo-de-entrada">    
+            <input class="entrada" type="text" id="nueva-palabra" placeholder="Añadir nueva palabra">
+            <button id="boton-añadir-palabra">Añadir palabra</button>    
+        </div>
+            <br><br>
+        <button id="boton-jugar">Jugar</button>
+    </div>
+
+    <div id="vista-juego" style="display: none;">
+        <h1>AHORCADO</h1>
+        <canvas id="canvas-ahorcado" width="200" height="200"></canvas>
+        <p id="intentos">Intentos: 7</p>
+        <div id="palabra-a-adivinar"></div>
+        <div id="teclado"></div>
+        <button id="boton-reiniciar">Reiniciar</button>
+        <button id="boton-volver-inicio">Volver al Inicio</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
