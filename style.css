@@ -19,23 +19,27 @@ html, body {
 }
 
 .imagen-de-fondo {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Fondo.jpg'); 
-    background-size: cover; 
+    background-image: url('Fondo.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
     filter: blur(0.8px);
 }
 
-#vista-principal {
+#vista-principal, #vista-juego {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupar toda la pantalla */
     text-align: center;
-    position: relative;
-    z-index: 1;
+    padding: 20px; /* Añade espacio alrededor */
 }
 
 button {
@@ -43,10 +47,10 @@ button {
     font-family: "Rye", serif;
     border: none;
     color: white; 
-    padding: 10px 20px; 
+    padding: 15px 30px; 
     text-align: center;  
-    font-size: 16px;
-    margin: 4px 2px;                       
+    font-size: 18px;
+    margin: 10px;                       
     cursor: pointer; 
     border-radius: 12px;  
     transition-duration: 0.01s; 
@@ -56,14 +60,6 @@ button:hover {
     background-color: #6da76f; 
     color: black; 
     border: 2px solid #4CAF50; 
-}
-
-#vista-principal button {
-    margin-top: 20px;
-}
-
-#vista-juego {
-    text-align: center;
 }
 
 #palabra-a-adivinar {
@@ -127,4 +123,30 @@ button:hover {
 .entrada:focus, .entrada:valid {
     outline: none;
     border: 1px solid #519053;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 250%;
+    }
+
+    p, .entrada {
+        font-size: 180%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    canvas {
+        width: 150px;
+        height: 150px;
+    }
+
+    #teclado button {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
