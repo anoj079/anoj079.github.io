@@ -19,27 +19,23 @@ html, body {
 }
 
 .imagen-de-fondo {
-    position: fixed;
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Fondo.jpg');
-    background-size: cover;
+    background-image: url('Fondo.jpg'); 
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    filter: blur(0.8px);
+    filter: blur(0.8px);
 }
 
-#vista-principal, #vista-juego {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ocupar toda la pantalla */
+#vista-principal {
     text-align: center;
-    padding: 20px; /* Añade espacio alrededor */
+    position: relative;
+    z-index: 1;
 }
 
 button {
@@ -47,10 +43,10 @@ button {
     font-family: "Rye", serif;
     border: none;
     color: white; 
-    padding: 15px 30px; 
+    padding: 10px 20px; 
     text-align: center;  
-    font-size: 18px;
-    margin: 10px;                       
+    font-size: 16px;
+    margin: 4px 2px;                       
     cursor: pointer; 
     border-radius: 12px;  
     transition-duration: 0.01s; 
@@ -60,6 +56,14 @@ button:hover {
     background-color: #6da76f; 
     color: black; 
     border: 2px solid #4CAF50; 
+}
+
+#vista-principal button {
+    margin-top: 20px;
+}
+
+#vista-juego {
+    text-align: center;
 }
 
 #palabra-a-adivinar {
@@ -103,50 +107,37 @@ button:hover {
     color: white;
 }
 
-/* Estilos para el grupo de entrada */
+/* Estilo para el contenedor del input */
 .grupo-de-entrada {
     position: relative;
+    width: 100%; /* Ocupa el 100% del contenedor padre */
+    max-width: 500px; /* Define un ancho máximo */
+    margin: 10px 0; /* Añade margen para separar del resto de los elementos */
 }
 
+/* Estilo para el input de entrada */
 .entrada {
     font-family: "Rye", serif;
-    font-size: 256%;
+    width: 100%; /* Ajusta automáticamente el ancho */
+    font-size: 18px;
     border: solid 1px #9e9e9e;
-    border-radius: 1rem;
+    border-radius: 12px;
     background: none;
-    padding: 1rem;
-    font-size: 0.8rem;
+    padding: 12px;
     color: #000000;
     transition: border 150ms cubic-bezier(0.4,0,0.2,1);
 }
 
+/* Cambia el borde cuando está enfocado o tiene texto */
 .entrada:focus, .entrada:valid {
     outline: none;
     border: 1px solid #519053;
 }
 
-/* Media queries para dispositivos móviles */
+/* Media queries para ajustar en pantallas más pequeñas */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 250%;
-    }
-
-    p, .entrada {
-        font-size: 180%;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    canvas {
-        width: 150px;
-        height: 150px;
-    }
-
-    #teclado button {
-        font-size: 14px;
-        padding: 8px;
+    .entrada {
+        font-size: 16px;
+        padding: 10px;
     }
 }
